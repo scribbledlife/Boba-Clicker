@@ -1,0 +1,99 @@
+/* 1. THE BACKGROUND (Dark Mode & Font) */
+body {
+    background-color: #1e1e24;
+    color: #f8f8ff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* 2. THE SCORE TEXT */
+h1 {
+    font-size: 3rem;
+}
+
+#score {
+    color: #ffb703;
+}
+
+/* 3. THE MAIN BOBA BUTTON */
+#boba-btn {
+    background-color: #fb8500;
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    font-size: 2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 8px 0px #cf6d00;
+    transition: all 0.1s;
+}
+
+#boba-btn:active {
+    transform: translateY(8px);
+    box-shadow: 0px 0px 0px #cf6d00;
+}
+
+/* 4. THE SHOP AREA */
+hr {
+    border: 1px solid #444;
+    margin: 40px 0;
+}
+
+/* UPGRADE 1: AUTO-BREWER */
+#buy-auto-btn {
+    background-color: #219ebc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#buy-auto-btn:active {
+    background-color: #126782;
+}
+
+/* UPGRADE 2: BOBA FACTORY (The New Drip!) */
+#buy-factory-btn {
+    background-color: #8338ec;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 15px;
+    box-shadow: 0px 6px 0px #5920a8;
+    transition: all 0.1s;
+}
+
+#buy-factory-btn:active {
+    transform: translateY(6px);
+    box-shadow: 0px 0px 0px #5920a8;
+    background-color: #742ede;
+}
+
+/* 5. THE JUICE (Floating Numbers) */
+.floating-number {
+    position: absolute;
+    color: #ffb703;
+    font-size: 2rem;
+    font-weight: bold;
+    pointer-events: none;
+    animation: floatUp 1s ease-out;
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-75px);
+    }
+}
