@@ -97,3 +97,28 @@ hr {
         transform: translateY(-75px);
     }
 }
+
+/* --- THE HARD RESET BUTTON --- */
+#reset-btn {
+    background-color: #d62828;
+    /* Danger Red */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 50px;
+    /* Pushes it way down to avoid accidental clicks */
+
+    /* A smaller squish effect */
+    box-shadow: 0px 4px 0px #9b1d20;
+    transition: all 0.1s;
+}
+
+#reset-btn:active {
+    transform: translateY(4px);
+    box-shadow: 0px 0px 0px #9b1d20;
+    background-color: #a51c1e;
+}
