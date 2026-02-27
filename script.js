@@ -3,6 +3,7 @@ const bobaButton = document.getElementById("boba-btn");
 const scoreDisplay = document.getElementById("score");
 const buyAutoButton = document.getElementById("buy-auto-btn");
 const autoDisplay = document.getElementById("auto-count");
+const resetButton = document.getElementById("reset-btn");
 
 // NEW: Find the Factory elements
 const buyFactoryButton = document.getElementById("buy-factory-btn");
@@ -96,3 +97,24 @@ setInterval(function () {
     localStorage.setItem("savedFactories", factories);
     localStorage.setItem("savedFactoryCost", factoryCost);
 }, 1000);
+
+// 8. THE HARD RESET NUKE (Debug Version)
+resetButton.addEventListener("click", function () {
+    // 1. Print a message to the secret console to prove the click works
+    console.log("NUKE BUTTON WAS CLICKED!");
+
+    // 2. Just drop the nuke immediately (No pop-up warning)
+    localStorage.clear();
+
+    bobaCount = 0;
+    autoBrewers = 0;
+    autoCost = 10;
+    factories = 0;
+    factoryCost = 500;
+
+    scoreDisplay.textContent = bobaCount;
+    autoDisplay.textContent = autoBrewers;
+    buyAutoButton.textContent = "Buy Auto-Brewer (Cost: " + autoCost + " Boba)";
+    factoryDisplay.textContent = factories;
+    buyFactoryButton.textContent = "Buy Boba Factory (Cost: " + factoryCost + " Boba)";
+});
